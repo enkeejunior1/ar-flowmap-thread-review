@@ -31,7 +31,7 @@
   <div class="body">
     <div class="hd"><b>Yonghyun Park</b> <span>@handle · 1/14</span></div>
     <div class="txt">Can we distill few-step AR video models without DMD?<br><br>Yes! We analyze why AR FlowMap distillation fails and fix it, matching 14B DMD models using only a 1.3B AR teacher while preserving diversity.<br><br>Project page: <a href="https://enkeejunior1.github.io/ar-video-flowmap/" target="_blank">https://enkeejunior1.github.io/ar-video-flowmap/</a><br>Paper: <a href="https://arxiv.org/abs/2611.31164" target="_blank">https://arxiv.org/abs/2611.31164</a><br><br>🧵 (1/n)</div>
-    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/01-part1-dmd-to-title-gwen.mp4" poster="posters/01-part1-dmd-to-title-gwen.mp4.jpg"></video><div class="fname">01-part1-dmd-to-title-gwen.mp4</div></div>
+    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/01-part1-dmd-to-title-gwen.mp4?v=88543376" poster="posters/01-part1-dmd-to-title-gwen.mp4.jpg?v=88543376"></video><div class="fname">01-part1-dmd-to-title-gwen.mp4</div></div>
     <div class="ft">
       <span class="cnt ok">276 / 280</span>
       <button class="copy" data-raw="Can we distill few-step AR video models without DMD?
@@ -50,7 +50,7 @@ Paper: https://arxiv.org/abs/2611.31164
   <div class="body">
     <div class="hd"><b>Yonghyun Park</b> <span>@handle · 2/14</span></div>
     <div class="txt">FlowMap (π-Flow, MeanFlow, CD) rivals DMD on images and bidirectional video while keeping diversity.<br><br>For AR video, the only change is that teacher and student condition on history (external video or rollouts).<br><br>Despite the same algorithm, FlowMap fails on AR video.<br><br>2/n</div>
-    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/02a-flowmap-equation.mp4" poster="posters/02a-flowmap-equation.mp4.jpg"></video><div class="fname">02a-flowmap-equation.mp4</div></div>
+    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/02a-flowmap-equation.mp4?v=a17415cd" poster="posters/02a-flowmap-equation.mp4.jpg?v=a17415cd"></video><div class="fname">02a-flowmap-equation.mp4</div></div>
     <div class="ft">
       <span class="cnt ok">271 / 280</span>
       <button class="copy" data-raw="FlowMap (π-Flow, MeanFlow, CD) rivals DMD on images and bidirectional video while keeping diversity.
@@ -68,7 +68,7 @@ Despite the same algorithm, FlowMap fails on AR video.
   <div class="body">
     <div class="hd"><b>Yonghyun Park</b> <span>@handle · 3/14</span></div>
     <div class="txt">We found that FlowMap fails in two ways:<br><br>1. Drifting: errors accumulate across chunks over long rollouts<br>2. Low-quality motion: fast-moving regions turn blurry and distorted<br><br>Why do these two failures happen?<br><br>3/n</div>
-    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/02-two-failure-modes.mp4" poster="posters/02-two-failure-modes.mp4.jpg"></video><div class="fname">02-two-failure-modes.mp4</div></div>
+    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/02-two-failure-modes.mp4?v=62996115" poster="posters/02-two-failure-modes.mp4.jpg?v=62996115"></video><div class="fname">02-two-failure-modes.mp4</div></div>
     <div class="ft">
       <span class="cnt ok">214 / 280</span>
       <button class="copy" data-raw="We found that FlowMap fails in two ways:
@@ -87,7 +87,7 @@ Why do these two failures happen?
   <div class="body">
     <div class="hd"><b>Yonghyun Park</b> <span>@handle · 4/14</span></div>
     <div class="txt">Failure mode 1: Drifting.<br><br>In AR FlowMap, teacher and student share the same history.<br><br>Under self-forcing, the AR teacher is conditioned on the student&#x27;s already-drifted history. Trained only on clean video, the teacher fails to fix the error and continues the drift.<br><br>4/n</div>
-    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/03-failure-drifting.mp4" poster="posters/03-failure-drifting.mp4.jpg"></video><div class="fname">03-failure-drifting.mp4</div></div>
+    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/03-failure-drifting.mp4?v=1f7f8672" poster="posters/03-failure-drifting.mp4.jpg?v=1f7f8672"></video><div class="fname">03-failure-drifting.mp4</div></div>
     <div class="ft">
       <span class="cnt ok">272 / 280</span>
       <button class="copy" data-raw="Failure mode 1: Drifting.
@@ -105,7 +105,7 @@ Under self-forcing, the AR teacher is conditioned on the student&#x27;s already-
   <div class="body">
     <div class="hd"><b>Yonghyun Park</b> <span>@handle · 5/14</span></div>
     <div class="txt">How do we fix this? The method is simple.<br><br>We train a drift model online on student rollouts to imitate its drifted transitions, and use it as the negative branch of guidance.<br><br>Subtracting the drift direction pushes the teacher back toward clean video!<br><br>5/n</div>
-    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/04-fix-antidrift-guidance.mp4" poster="posters/04-fix-antidrift-guidance.mp4.jpg"></video><div class="fname">04-fix-antidrift-guidance.mp4</div></div>
+    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/04-fix-antidrift-guidance.mp4?v=4cbe3048" poster="posters/04-fix-antidrift-guidance.mp4.jpg?v=4cbe3048"></video><div class="fname">04-fix-antidrift-guidance.mp4</div></div>
     <div class="ft">
       <span class="cnt ok">257 / 280</span>
       <button class="copy" data-raw="How do we fix this? The method is simple.
@@ -123,7 +123,7 @@ Subtracting the drift direction pushes the teacher back toward clean video!
   <div class="body">
     <div class="hd"><b>Yonghyun Park</b> <span>@handle · 6/14</span></div>
     <div class="txt">Failure mode 2: Low-quality motion.<br><br>Why does the student fail to learn motion?<br><br>We found that patches with larger motion have a much less smooth teacher velocity field (higher Lipschitz), making fast motion hard to learn in a few steps.<br><br>6/n</div>
-    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/05-failure-low-quality-motion.mp4" poster="posters/05-failure-low-quality-motion.mp4.jpg"></video><div class="fname">05-failure-low-quality-motion.mp4</div></div>
+    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/05-failure-low-quality-motion.mp4?v=d69433e4" poster="posters/05-failure-low-quality-motion.mp4.jpg?v=d69433e4"></video><div class="fname">05-failure-low-quality-motion.mp4</div></div>
     <div class="ft">
       <span class="cnt ok">242 / 280</span>
       <button class="copy" data-raw="Failure mode 2: Low-quality motion.
@@ -141,7 +141,7 @@ We found that patches with larger motion have a much less smooth teacher velocit
   <div class="body">
     <div class="hd"><b>Yonghyun Park</b> <span>@handle · 7/14</span></div>
     <div class="txt">And this velocity smoothness is closely tied to guidance.<br><br>In the first chunk, CFG smooths the velocity field, but in later chunks this effect largely disappears.<br><br>Surprisingly, skip-layer guidance (SLG), skipping a block on the negative branch, keeps later chunks smooth!<br><br>7/n</div>
-    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/06-cfg-slg-smoothness.mp4" poster="posters/06-cfg-slg-smoothness.mp4.jpg"></video><div class="fname">06-cfg-slg-smoothness.mp4</div></div>
+    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/06-cfg-slg-smoothness.mp4?v=3714943e" poster="posters/06-cfg-slg-smoothness.mp4.jpg?v=3714943e"></video><div class="fname">06-cfg-slg-smoothness.mp4</div></div>
     <div class="ft">
       <span class="cnt ok">277 / 280</span>
       <button class="copy" data-raw="And this velocity smoothness is closely tied to guidance.
@@ -159,7 +159,7 @@ Surprisingly, skip-layer guidance (SLG), skipping a block on the negative branch
   <div class="body">
     <div class="hd"><b>Yonghyun Park</b> <span>@handle · 8/14</span></div>
     <div class="txt">Our motion-aware guidance applies SLG more strongly on motion patches.<br><br>We predict patch-wise teacher uncertainty and apply stronger soft-skip guidance where uncertainty is high (moving patches).<br><br>This smooths fast-motion regions further, helping the student learn motion!<br><br>8/n</div>
-    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/07-motion-aware.mp4" poster="posters/07-motion-aware.mp4.jpg"></video><div class="fname">07-motion-aware.mp4</div></div>
+    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/07-motion-aware.mp4?v=be3360fc" poster="posters/07-motion-aware.mp4.jpg?v=be3360fc"></video><div class="fname">07-motion-aware.mp4</div></div>
     <div class="ft">
       <span class="cnt ok">277 / 280</span>
       <button class="copy" data-raw="Our motion-aware guidance applies SLG more strongly on motion patches.
@@ -191,7 +191,7 @@ This smooths fast-motion regions further, helping the student learn motion!
   <div class="body">
     <div class="hd"><b>Yonghyun Park</b> <span>@handle · 10/14</span></div>
     <div class="txt">Applying our guidance to FlowMap preserves teacher diversity while matching DMD baselines in quality, using only a 1.3B AR teacher (vs. 14B bidirectional teachers in DMD)!<br><br>10/n</div>
-    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/09-why-not-dmd-house.mp4" poster="posters/09-why-not-dmd-house.mp4.jpg"></video><div class="fname">09-why-not-dmd-house.mp4</div></div>
+    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/09-why-not-dmd-house.mp4?v=d095e6a1" poster="posters/09-why-not-dmd-house.mp4.jpg?v=d095e6a1"></video><div class="fname">09-why-not-dmd-house.mp4</div></div>
     <div class="ft">
       <span class="cnt ok">177 / 280</span>
       <button class="copy" data-raw="Applying our guidance to FlowMap preserves teacher diversity while matching DMD baselines in quality, using only a 1.3B AR teacher (vs. 14B bidirectional teachers in DMD)!
@@ -205,7 +205,7 @@ This smooths fast-motion regions further, helping the student learn motion!
   <div class="body">
     <div class="hd"><b>Yonghyun Park</b> <span>@handle · 11/14</span></div>
     <div class="txt">Our 4-step AR FlowMap models also generate 30-second videos!<br><br>11/n</div>
-    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/10-long-video.mp4" poster="posters/10-long-video.mp4.jpg"></video><div class="fname">10-long-video.mp4</div></div>
+    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/10-long-video.mp4?v=392cca7c" poster="posters/10-long-video.mp4.jpg?v=392cca7c"></video><div class="fname">10-long-video.mp4</div></div>
     <div class="ft">
       <span class="cnt ok">66 / 280</span>
       <button class="copy" data-raw="Our 4-step AR FlowMap models also generate 30-second videos!
@@ -219,7 +219,7 @@ This smooths fast-motion regions further, helping the student learn motion!
   <div class="body">
     <div class="hd"><b>Yonghyun Park</b> <span>@handle · 12/14</span></div>
     <div class="txt">&quot;Anti-drifting guidance is also reverse-KL. Doesn&#x27;t it hurt diversity like DMD?&quot;<br><br>No, surprisingly, it helps both quality and diversity!<br><br>DMD optimizes reverse-KL on clean x_0, while anti-drifting only tilts velocity at noisy x_t, largely keeping the teacher&#x27;s trajectory.<br><br>12/n</div>
-    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/12-antidrift-diversity-cat.mp4" poster="posters/12-antidrift-diversity-cat.mp4.jpg"></video><div class="fname">12-antidrift-diversity-cat.mp4</div></div>
+    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/12-antidrift-diversity-cat.mp4?v=9d35e314" poster="posters/12-antidrift-diversity-cat.mp4.jpg?v=9d35e314"></video><div class="fname">12-antidrift-diversity-cat.mp4</div></div>
     <div class="ft">
       <span class="cnt ok">278 / 280</span>
       <button class="copy" data-raw="&quot;Anti-drifting guidance is also reverse-KL. Doesn&#x27;t it hurt diversity like DMD?&quot;
@@ -237,7 +237,7 @@ DMD optimizes reverse-KL on clean x_0, while anti-drifting only tilts velocity a
   <div class="body">
     <div class="hd"><b>Yonghyun Park</b> <span>@handle · 13/14</span></div>
     <div class="txt">So what&#x27;s the takeaway?<br><br>You can now train few-step AR video models without DMD!<br><br>Project page: <a href="https://enkeejunior1.github.io/ar-video-flowmap/" target="_blank">https://enkeejunior1.github.io/ar-video-flowmap/</a><br>Paper: <a href="https://arxiv.org/abs/2611.31164" target="_blank">https://arxiv.org/abs/2611.31164</a><br><br>13/n</div>
-    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/13-flowmap-pillar.mp4" poster="posters/13-flowmap-pillar.mp4.jpg"></video><div class="fname">13-flowmap-pillar.mp4</div></div>
+    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/13-flowmap-pillar.mp4?v=871701b7" poster="posters/13-flowmap-pillar.mp4.jpg?v=871701b7"></video><div class="fname">13-flowmap-pillar.mp4</div></div>
     <div class="ft">
       <span class="cnt ok">156 / 280</span>
       <button class="copy" data-raw="So what&#x27;s the takeaway?
