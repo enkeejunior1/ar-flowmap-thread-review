@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow"><title>Thread review: ar-video-flowmap</title>
+<style>
+  body { margin: 0; background: #fff; color: #0f1419; font: 15px/1.4 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .col { max-width: 600px; margin: 0 auto; border-left: 1px solid #eff3f4; border-right: 1px solid #eff3f4; min-height: 100vh; }
+  header { position: sticky; top: 0; z-index: 2; background: rgba(255,255,255,.88); backdrop-filter: blur(8px); padding: 12px 16px; border-bottom: 1px solid #eff3f4; }
+  header h1 { font-size: 20px; margin: 0; } header p { margin: 2px 0 0; color: #536471; font-size: 13px; }
+  .tw { display: flex; gap: 12px; padding: 12px 16px 0; }
+  .rail { display: flex; flex-direction: column; align-items: center; width: 40px; flex: none; }
+  .av { width: 40px; height: 40px; border-radius: 50%; background: #2e4fa3; color: #fff; font-weight: 700; display: grid; place-items: center; font-size: 14px; }
+  .line { flex: 1; width: 2px; background: #cfd9de; margin-top: 4px; }
+  .body { flex: 1; min-width: 0; padding-bottom: 12px; }
+  .hd span { color: #536471; }
+  .txt { margin-top: 2px; white-space: normal; word-wrap: break-word; }
+  .txt a { color: #1d9bf0; text-decoration: none; }
+  .media { margin-top: 12px; border: 1px solid #cfd9de; border-radius: 16px; overflow: hidden; background: #000; }
+  .media video { display: block; width: 100%; }
+  .fname { background: #f7f9f9; color: #536471; font: 12px ui-monospace, Menlo, monospace; padding: 6px 12px; }
+  .ft { margin-top: 8px; color: #536471; font-size: 13px; display: flex; align-items: center; gap: 12px; }
+  .cnt.over { color: #f4212e; font-weight: 700; }
+  .cnt.ok { color: #00ba7c; }
+  .copy { border: 1px solid #cfd9de; background: #fff; color: #536471; border-radius: 999px; padding: 2px 10px; font-size: 12px; cursor: pointer; }
+  .copy:hover { background: #f7f9f9; color: #0f1419; }
+</style></head>
+<body><div class="col">
+<header><h1>Thread review</h1><p>ar-video-flowmap · 13 posts · all ≤ 280 weighted chars (URLs = 23)</p></header>
+
+<article class="tw" id="t1">
+  <div class="rail"><div class="av">YP</div><div class="line"></div></div>
+  <div class="body">
+    <div class="hd"><b>Yonghyun Park</b> <span>@handle · 1/13</span></div>
+    <div class="txt">Can we distill few-step AR video models without DMD?<br><br>Yes! We analyze why AR FlowMap distillation fails and fix it, matching 14B DMD models using only a 1.3B AR teacher while preserving diversity.<br><br>Project page: <a href="https://enkeejunior1.github.io/ar-video-flowmap/" target="_blank">https://enkeejunior1.github.io/ar-video-flowmap/</a><br>Paper: <a href="https://arxiv.org/abs/2611.31164" target="_blank">https://arxiv.org/abs/2611.31164</a><br><br>🧵 (1/n)</div>
+    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/01-part1-title-first-gwen.mp4" poster="posters/01-part1-title-first-gwen.mp4.jpg"></video><div class="fname">01-part1-title-first-gwen.mp4</div></div>
+    <div class="ft">
+      <span class="cnt ok">276 / 280</span>
+      <button class="copy" data-raw="Can we distill few-step AR video models without DMD?
+
+Yes! We analyze why AR FlowMap distillation fails and fix it, matching 14B DMD models using only a 1.3B AR teacher while preserving diversity.
+
+Project page: https://enkeejunior1.github.io/ar-video-flowmap/
+Paper: https://arxiv.org/abs/2611.31164
+
+🧵 (1/n)" onclick="navigator.clipboard.writeText(this.dataset.raw);this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',1200)">Copy</button>
+    </div>
+  </div>
+</article>
+<article class="tw" id="t2">
+  <div class="rail"><div class="av">YP</div><div class="line"></div></div>
+  <div class="body">
+    <div class="hd"><b>Yonghyun Park</b> <span>@handle · 2/13</span></div>
+    <div class="txt">FlowMap distillation (π-Flow, MeanFlow, CD) already rivals DMD on bidirectional video while keeping diversity.<br><br>To apply it to AR video, both teacher and student condition on video history, using external video (teacher-forcing) or student rollouts (self-forcing).<br><br>2/n</div>
+    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/02a-flowmap-equation.mp4" poster="posters/02a-flowmap-equation.mp4.jpg"></video><div class="fname">02a-flowmap-equation.mp4</div></div>
+    <div class="ft">
+      <span class="cnt ok">269 / 280</span>
+      <button class="copy" data-raw="FlowMap distillation (π-Flow, MeanFlow, CD) already rivals DMD on bidirectional video while keeping diversity.
+
+To apply it to AR video, both teacher and student condition on video history, using external video (teacher-forcing) or student rollouts (self-forcing).
+
+2/n" onclick="navigator.clipboard.writeText(this.dataset.raw);this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',1200)">Copy</button>
+    </div>
+  </div>
+</article>
+<article class="tw" id="t3">
+  <div class="rail"><div class="av">YP</div><div class="line"></div></div>
+  <div class="body">
+    <div class="hd"><b>Yonghyun Park</b> <span>@handle · 3/13</span></div>
+    <div class="txt">When applied naively, FlowMap fails in two ways on AR video:<br><br>1. Drifting: errors build up across chunks over long rollouts<br>2. Low-quality motion: fast-moving regions turn blurry and distorted<br><br>Why do these two failures happen?<br><br>3/n</div>
+    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/02-two-failure-modes.mp4" poster="posters/02-two-failure-modes.mp4.jpg"></video><div class="fname">02-two-failure-modes.mp4</div></div>
+    <div class="ft">
+      <span class="cnt ok">232 / 280</span>
+      <button class="copy" data-raw="When applied naively, FlowMap fails in two ways on AR video:
+
+1. Drifting: errors build up across chunks over long rollouts
+2. Low-quality motion: fast-moving regions turn blurry and distorted
+
+Why do these two failures happen?
+
+3/n" onclick="navigator.clipboard.writeText(this.dataset.raw);this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',1200)">Copy</button>
+    </div>
+  </div>
+</article>
+<article class="tw" id="t4">
+  <div class="rail"><div class="av">YP</div><div class="line"></div></div>
+  <div class="body">
+    <div class="hd"><b>Yonghyun Park</b> <span>@handle · 4/13</span></div>
+    <div class="txt">Failure mode 1: Drifting.<br><br>In SF-DMD, a bidirectional teacher scores the whole video at once.<br><br>In AR FlowMap, the causal teacher conditions on the student&#x27;s already-drifted history. Trained only on clean video, the teacher fails to fix the error and continues the drift.<br><br>4/n</div>
+    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/03-failure-drifting.mp4" poster="posters/03-failure-drifting.mp4.jpg"></video><div class="fname">03-failure-drifting.mp4</div></div>
+    <div class="ft">
+      <span class="cnt ok">275 / 280</span>
+      <button class="copy" data-raw="Failure mode 1: Drifting.
+
+In SF-DMD, a bidirectional teacher scores the whole video at once.
+
+In AR FlowMap, the causal teacher conditions on the student&#x27;s already-drifted history. Trained only on clean video, the teacher fails to fix the error and continues the drift.
+
+4/n" onclick="navigator.clipboard.writeText(this.dataset.raw);this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',1200)">Copy</button>
+    </div>
+  </div>
+</article>
+<article class="tw" id="t5">
+  <div class="rail"><div class="av">YP</div><div class="line"></div></div>
+  <div class="body">
+    <div class="hd"><b>Yonghyun Park</b> <span>@handle · 5/13</span></div>
+    <div class="txt">How do we fix drifting without DMD?<br><br>We train a drift model online on student rollouts to imitate its drifted transitions, and use it as the negative branch of guidance.<br><br>Subtracting the drift direction pushes the teacher back toward clean video!<br><br>5/n</div>
+    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/04-fix-antidrift-guidance.mp4" poster="posters/04-fix-antidrift-guidance.mp4.jpg"></video><div class="fname">04-fix-antidrift-guidance.mp4</div></div>
+    <div class="ft">
+      <span class="cnt ok">251 / 280</span>
+      <button class="copy" data-raw="How do we fix drifting without DMD?
+
+We train a drift model online on student rollouts to imitate its drifted transitions, and use it as the negative branch of guidance.
+
+Subtracting the drift direction pushes the teacher back toward clean video!
+
+5/n" onclick="navigator.clipboard.writeText(this.dataset.raw);this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',1200)">Copy</button>
+    </div>
+  </div>
+</article>
+<article class="tw" id="t6">
+  <div class="rail"><div class="av">YP</div><div class="line"></div></div>
+  <div class="body">
+    <div class="hd"><b>Yonghyun Park</b> <span>@handle · 6/13</span></div>
+    <div class="txt">Failure mode 2: Low-quality motion.<br><br>Unlike DMD, a FlowMap student has to learn the teacher&#x27;s velocity field across long steps.<br><br>Patches with larger motion have a much less smooth velocity field (higher Lipschitz), making fast motion hard to learn in a few steps.<br><br>6/n</div>
+    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/05-failure-low-quality-motion.mp4" poster="posters/05-failure-low-quality-motion.mp4.jpg"></video><div class="fname">05-failure-low-quality-motion.mp4</div></div>
+    <div class="ft">
+      <span class="cnt ok">268 / 280</span>
+      <button class="copy" data-raw="Failure mode 2: Low-quality motion.
+
+Unlike DMD, a FlowMap student has to learn the teacher&#x27;s velocity field across long steps.
+
+Patches with larger motion have a much less smooth velocity field (higher Lipschitz), making fast motion hard to learn in a few steps.
+
+6/n" onclick="navigator.clipboard.writeText(this.dataset.raw);this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',1200)">Copy</button>
+    </div>
+  </div>
+</article>
+<article class="tw" id="t7">
+  <div class="rail"><div class="av">YP</div><div class="line"></div></div>
+  <div class="body">
+    <div class="hd"><b>Yonghyun Park</b> <span>@handle · 7/13</span></div>
+    <div class="txt">Guidance controls this smoothness.<br><br>In chunk 1, CFG smooths the velocity field (weak CFG fails). From chunk 2 on, CFG stops helping since text does not guide frame-to-frame motion.<br><br>Skip-layer guidance (SLG) skips a block instead and keeps chunk 2+ smooth!<br><br>7/n</div>
+    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/06-cfg-slg-smoothness.mp4" poster="posters/06-cfg-slg-smoothness.mp4.jpg"></video><div class="fname">06-cfg-slg-smoothness.mp4</div></div>
+    <div class="ft">
+      <span class="cnt ok">261 / 280</span>
+      <button class="copy" data-raw="Guidance controls this smoothness.
+
+In chunk 1, CFG smooths the velocity field (weak CFG fails). From chunk 2 on, CFG stops helping since text does not guide frame-to-frame motion.
+
+Skip-layer guidance (SLG) skips a block instead and keeps chunk 2+ smooth!
+
+7/n" onclick="navigator.clipboard.writeText(this.dataset.raw);this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',1200)">Copy</button>
+    </div>
+  </div>
+</article>
+<article class="tw" id="t8">
+  <div class="rail"><div class="av">YP</div><div class="line"></div></div>
+  <div class="body">
+    <div class="hd"><b>Yonghyun Park</b> <span>@handle · 8/13</span></div>
+    <div class="txt">Can we focus this smoothness on moving regions?<br><br>We predict patch-wise teacher uncertainty and apply stronger soft-skip guidance where uncertainty is high (moving patches).<br><br>This smooths high-motion regions further at zero extra inference cost (still 4 NFE).<br><br>8/n</div>
+    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/07-motion-aware.mp4" poster="posters/07-motion-aware.mp4.jpg"></video><div class="fname">07-motion-aware.mp4</div></div>
+    <div class="ft">
+      <span class="cnt ok">263 / 280</span>
+      <button class="copy" data-raw="Can we focus this smoothness on moving regions?
+
+We predict patch-wise teacher uncertainty and apply stronger soft-skip guidance where uncertainty is high (moving patches).
+
+This smooths high-motion regions further at zero extra inference cost (still 4 NFE).
+
+8/n" onclick="navigator.clipboard.writeText(this.dataset.raw);this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',1200)">Copy</button>
+    </div>
+  </div>
+</article>
+<article class="tw" id="t9">
+  <div class="rail"><div class="av">YP</div><div class="line"></div></div>
+  <div class="body">
+    <div class="hd"><b>Yonghyun Park</b> <span>@handle · 9/13</span></div>
+    <div class="txt">Why not DMD?<br>- hurts sample diversity<br>- needs a 14B bidirectional teacher<br><br>Ours (AR FlowMap):<br>- preserves diversity (V-JEPA 2: 0.0964 vs. ≤0.0745)<br>- distills directly from a 1.3B AR teacher, matching 14B DMD on VBench (84.76 vs. 84.74)<br><br>9/n</div>
+    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/09-why-not-dmd-house.mp4" poster="posters/09-why-not-dmd-house.mp4.jpg"></video><div class="fname">09-why-not-dmd-house.mp4</div></div>
+    <div class="ft">
+      <span class="cnt ok">241 / 280</span>
+      <button class="copy" data-raw="Why not DMD?
+- hurts sample diversity
+- needs a 14B bidirectional teacher
+
+Ours (AR FlowMap):
+- preserves diversity (V-JEPA 2: 0.0964 vs. ≤0.0745)
+- distills directly from a 1.3B AR teacher, matching 14B DMD on VBench (84.76 vs. 84.74)
+
+9/n" onclick="navigator.clipboard.writeText(this.dataset.raw);this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',1200)">Copy</button>
+    </div>
+  </div>
+</article>
+<article class="tw" id="t10">
+  <div class="rail"><div class="av">YP</div><div class="line"></div></div>
+  <div class="body">
+    <div class="hd"><b>Yonghyun Park</b> <span>@handle · 10/13</span></div>
+    <div class="txt">Our 4-step AR FlowMap models also generate 30-second videos.<br><br>Over 30s rollouts, our models reach the highest aesthetic quality among all baselines (62.13 vs. ≤61.41), with less aesthetic drift (ΔAQ) on π-Flow than Causal-rCM and Causal Forcing.<br><br>10/n</div>
+    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/10-long-video.mp4" poster="posters/10-long-video.mp4.jpg"></video><div class="fname">10-long-video.mp4</div></div>
+    <div class="ft">
+      <span class="cnt ok">252 / 280</span>
+      <button class="copy" data-raw="Our 4-step AR FlowMap models also generate 30-second videos.
+
+Over 30s rollouts, our models reach the highest aesthetic quality among all baselines (62.13 vs. ≤61.41), with less aesthetic drift (ΔAQ) on π-Flow than Causal-rCM and Causal Forcing.
+
+10/n" onclick="navigator.clipboard.writeText(this.dataset.raw);this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',1200)">Copy</button>
+    </div>
+  </div>
+</article>
+<article class="tw" id="t11">
+  <div class="rail"><div class="av">YP</div><div class="line"></div></div>
+  <div class="body">
+    <div class="hd"><b>Yonghyun Park</b> <span>@handle · 11/13</span></div>
+    <div class="txt">&quot;Anti-drifting guidance also trains on student rollouts. Doesn&#x27;t it hurt diversity like DMD?&quot;<br><br>No, both quality and diversity improve!<br><br>DMD optimizes reverse-KL on clean x_0, while anti-drifting only tilts velocities at noisy x_t, keeping noise-to-output coupling.<br><br>11/n</div>
+    <div class="media"><video controls loop muted playsinline preload="metadata" src="videos/12-antidrift-diversity-cat.mp4" poster="posters/12-antidrift-diversity-cat.mp4.jpg"></video><div class="fname">12-antidrift-diversity-cat.mp4</div></div>
+    <div class="ft">
+      <span class="cnt ok">270 / 280</span>
+      <button class="copy" data-raw="&quot;Anti-drifting guidance also trains on student rollouts. Doesn&#x27;t it hurt diversity like DMD?&quot;
+
+No, both quality and diversity improve!
+
+DMD optimizes reverse-KL on clean x_0, while anti-drifting only tilts velocities at noisy x_t, keeping noise-to-output coupling.
+
+11/n" onclick="navigator.clipboard.writeText(this.dataset.raw);this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',1200)">Copy</button>
+    </div>
+  </div>
+</article>
+<article class="tw" id="t12">
+  <div class="rail"><div class="av">YP</div><div class="line"></div></div>
+  <div class="body">
+    <div class="hd"><b>Yonghyun Park</b> <span>@handle · 12/13</span></div>
+    <div class="txt">Takeaways:<br><br>- Few-step AR video doesn&#x27;t need DMD or a 14B bidirectional teacher.<br>- In AR FlowMap, teacher guidance is key:<br>  1. Guiding away from student drift fixes exposure bias while keeping diversity.<br>  2. Guiding smoothness on uncertain patches fixes fast motion.<br><br>12/n</div>
+    
+    <div class="ft">
+      <span class="cnt ok">274 / 280</span>
+      <button class="copy" data-raw="Takeaways:
+
+- Few-step AR video doesn&#x27;t need DMD or a 14B bidirectional teacher.
+- In AR FlowMap, teacher guidance is key:
+  1. Guiding away from student drift fixes exposure bias while keeping diversity.
+  2. Guiding smoothness on uncertain patches fixes fast motion.
+
+12/n" onclick="navigator.clipboard.writeText(this.dataset.raw);this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',1200)">Copy</button>
+    </div>
+  </div>
+</article>
+<article class="tw" id="t13">
+  <div class="rail"><div class="av">YP</div></div>
+  <div class="body">
+    <div class="hd"><b>Yonghyun Park</b> <span>@handle · 13/13</span></div>
+    <div class="txt">Project page: <a href="https://enkeejunior1.github.io/ar-video-flowmap/" target="_blank">https://enkeejunior1.github.io/ar-video-flowmap/</a><br>Paper: <a href="https://arxiv.org/abs/2611.31164" target="_blank">https://arxiv.org/abs/2611.31164</a><br><br>My first PhD paper, started during my Roblox internship! So grateful to my mentor <a class="at" href="https://x.com/guande" target="_blank">@guande</a>, coauthors <a class="at" href="https://x.com/hozy5333" target="_blank">@hozy5333</a>, <a class="at" href="https://x.com/HanshengCh" target="_blank">@HanshengCh</a>, <a class="at" href="https://x.com/thejoyestboy" target="_blank">@thejoyestboy</a>, <a class="at" href="https://x.com/chaoqi31" target="_blank">@chaoqi31</a>, <a class="at" href="https://x.com/xxunhuang" target="_blank">@xxunhuang</a>, and my advisor <a class="at" href="https://x.com/thoma_gu" target="_blank">@thoma_gu</a> 🙏</div>
+    
+    <div class="ft">
+      <span class="cnt ok">260 / 280</span>
+      <button class="copy" data-raw="Project page: https://enkeejunior1.github.io/ar-video-flowmap/
+Paper: https://arxiv.org/abs/2611.31164
+
+My first PhD paper, started during my Roblox internship! So grateful to my mentor @guande, coauthors @hozy5333, @HanshengCh, @thejoyestboy, @chaoqi31, @xxunhuang, and my advisor @thoma_gu 🙏" onclick="navigator.clipboard.writeText(this.dataset.raw);this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',1200)">Copy</button>
+    </div>
+  </div>
+</article>
+</div></body></html>
